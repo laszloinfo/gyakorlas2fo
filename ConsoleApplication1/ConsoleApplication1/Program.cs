@@ -206,7 +206,7 @@ namespace ElsoValodiCharpProjekt
                 }
                 i++;
             }*/
-            Console.Write("kérem a pozitív egész számot!");
+            /*Console.Write("kérem a pozitív egész számot!");
             int BemenoSzam = Int32.Parse(Console.ReadLine());
             int szamlalo = 0;
             int osztosszeg = 0;
@@ -228,10 +228,116 @@ namespace ElsoValodiCharpProjekt
             {
                 Console.WriteLine($"a bemenő szám {BemenoSzam}nem prím");
                 Console.WriteLine($"a bemnő szám {BemenoSzam}osztóinak összege :{osztosszeg}");
+            }*/
+
+
+            //19.feladat
+            /*Console.WriteLine("kérem a pozitív egész számot:");
+            int BemenoSzam = Int32.Parse(Console.ReadLine());
+            int osztokosszege = 0;
+
+            int i = 1;
+            while(i < BemenoSzam)
+            {
+                if(BemenoSzam % i ==0)
+                {
+                    osztokosszege += 1;
+                }
+                i++;
             }
+            if(osztokosszege == BemenoSzam)
+            {
+                Console.WriteLine($"A szám {BemenoSzam} tökéletes szám.");
+
+            }
+
+            else
+            {
+                Console.WriteLine($"A szám {BemenoSzam} nem tökéletes szám");
+            }*/
+            /*int alap = -1;
+            while(alap < 0 || alap >=10)
+            {
+                Console.WriteLine("kérem az alapot:");
+                int alap = Int32.Parse(Console.ReadLine());
+            }
+
+            
+            Console.WriteLine("kérem a kitevőt");
+            int kitevo = Int32.Parse(Console.ReadLine());
+            int hatvany = 1;
+
+
+            for(int i = 0;i < kitevo;i++)
+            {
+                hatvany *= alap;
+
+            }
+            Console.Write($"a hatvány: {hatvany}");*/
+
+
+            //plusz feladat
+            /*int szam = 3;
+
+
+            while(primszamE(szam))
+            {
+
+                Console.Write("kérek egy nem prím számot");
+                szam = Convert.ToInt32(Console.ReadLine());
+
+            }*/
+            int szam = 0;
+            int osszeg = 0;
+            while(szam<= 10)
+            {
+               
+                Console.WriteLine("kérek egy 10-nél kisebb egész számot: ");
+                szam = Int32.Parse(Console.ReadLine());
+                
+                if(szam<=10)
+                {
+                    osszeg += szam;
+                    Console.WriteLine($"az eddig beolvasott számok összege: {osszeg}.");
+
+                }
+                else
+                {
+                    Console.WriteLine("nem megfelő szám!");
+                    break;
+                }
+                
+            }
+
+            Console.WriteLine($"a beolvasott számok összege: {osszeg}");
 
 
             Console.ReadKey(true);
+        }
+
+        static bool primszamE(int szam)
+        {
+            bool teljesul = true;
+
+
+            int osztokSzama = 0;
+            
+            for(int i=1; i<= szam;i++)
+            {
+                if(szam % i ==0)
+                {
+                    osztokSzama++;
+                }
+                
+            }
+            if (osztokSzama == 2)
+            {
+                return teljesul;
+            }
+            else
+            {
+                return !teljesul;
+            }
         }
     }
 }
