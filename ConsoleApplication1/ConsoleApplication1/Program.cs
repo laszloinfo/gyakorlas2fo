@@ -149,8 +149,8 @@ namespace ElsoValodiCharpProjekt
                 Console.Write(i + " ");
             }
 
-            /* elöltesztelő ciklus
-             * int i = 1;
+             //elöltesztelő ciklus
+              int i = 1;
             while(i < BemenoSzam)
             {
                 Console.Write(i++ + " ");
@@ -161,17 +161,77 @@ namespace ElsoValodiCharpProjekt
             }
 
             /* hátultesztelő ciklus
+              int i=1;
             do
             {
-                Console.Write(i++ + " ");
+                Console.Write(i++);
             } while (i < BemenoSzam); */
 
-            //16.feladat
+            /*16.feladat
+
+            Console.Write("kérem a pozitív egész számot!");
+            int BemenoSzam = Int32.Parse(Console.ReadLine());
+            /*string kiiratas = "";
+            for (int i =1;i < BemenoSzam;i++)
+            {
+                kiiratas += i + "\n "; // \n jelöli a sortörést
+            }
+            Console.WriteLine(kiiratas);
+            for  (int i =1,i < BemenoSzam,i++)
+            {
+                Console.WriteLine(i);
+            }*/
 
 
+            //17.feladat
+
+            /*Console.Write("kérem a pozitív egész számot!");
+            int BemenoSzam = Int32.Parse(Console.ReadLine());
+            Console.WriteLine($"{BemenoSzam} egész osztói:");
+            /* for(int i= 1;i<=BemenoSzam;i++)
+             {
+
+                 if (BemenoSzam % i == 0) 
+                 {
+                     Console.WriteLine(i);
+                 }
+             }*/
+
+            /*int i = 1;
+            while(i<=BemenoSzam){
+
+                if (BemenoSzam % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+                i++;
+            }*/
+            Console.Write("kérem a pozitív egész számot!");
+            int BemenoSzam = Int32.Parse(Console.ReadLine());
+            int szamlalo = 0;
+            int osztosszeg = 0;
+            for(int i=1;i< BemenoSzam + 1;i++)
+            {
+
+                if(BemenoSzam % i == 0)
+                {
+                    szamlalo++;
+                    osztosszeg += i;
+                }
+            }
+             if(szamlalo==2)
+            {
+                Console.WriteLine($"a bemnő szám {BemenoSzam} prím");
+                Console.WriteLine($"a bemnő szám {BemenoSzam}osztóinak összege :{osztosszeg}");
+            }
+            else
+            {
+                Console.WriteLine($"a bemenő szám {BemenoSzam}nem prím");
+                Console.WriteLine($"a bemnő szám {BemenoSzam}osztóinak összege :{osztosszeg}");
+            }
 
 
-                Console.ReadKey(true);
+            Console.ReadKey(true);
         }
     }
 }
