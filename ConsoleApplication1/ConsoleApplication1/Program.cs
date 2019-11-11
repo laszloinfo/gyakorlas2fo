@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -129,9 +129,49 @@ namespace ElsoValodiCharpProjekt
             else
             {
                 Console.WriteLine("A feladat nem megoldható!");
-            }*/
+            }
 
-            Console.ReadKey(true);
+
+
+            //15.feladat
+
+            Console.Write("kérem a pozitív egész számot!");
+            int BemenoSzam = Int32.Parse(Console.ReadLine());
+            /*string kiiratas = "";
+            for (int i =1;i < BemenoSzam;i++)
+            {
+                kiiratas += i + " ";
+            }
+            Console.WriteLine(kiiratas);
+
+            /*for (int i = 1; i < BemenoSzam; i++)
+            {
+                Console.Write(i + " ");
+            }
+
+            /* elöltesztelő ciklus
+             * int i = 1;
+            while(i < BemenoSzam)
+            {
+                Console.Write(i++ + " ");
+                //i = i + 1;
+                //i += 1;
+                //i++;
+
+            }
+
+            /* hátultesztelő ciklus
+            do
+            {
+                Console.Write(i++ + " ");
+            } while (i < BemenoSzam); */
+
+            //16.feladat
+
+
+
+
+                Console.ReadKey(true);
         }
     }
 }
