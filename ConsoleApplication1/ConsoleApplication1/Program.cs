@@ -287,57 +287,199 @@ namespace ElsoValodiCharpProjekt
                 szam = Convert.ToInt32(Console.ReadLine());
 
             }*/
-            int szam = 0;
-            int osszeg = 0;
-            while(szam<= 10)
-            {
-               
-                Console.WriteLine("kérek egy 10-nél kisebb egész számot: ");
-                szam = Int32.Parse(Console.ReadLine());
-                
-                if(szam<=10)
-                {
-                    osszeg += szam;
-                    Console.WriteLine($"az eddig beolvasott számok összege: {osszeg}.");
+            /* int szam = 0;
+             int osszeg = 0;
+             while(szam<= 10)
+             {
 
-                }
-                else
-                {
-                    Console.WriteLine("nem megfelő szám!");
-                    break;
-                }
-                
+                 Console.WriteLine("kérek egy 10-nél kisebb egész számot: ");
+                 szam = Int32.Parse(Console.ReadLine());
+
+                 if(szam<=10)
+                 {
+                     osszeg += szam;
+                     Console.WriteLine($"az eddig beolvasott számok összege: {osszeg}.");
+
+                 }
+                 else
+                 {
+                     Console.WriteLine("nem megfelő szám!");
+                     break;
+                 }
+
+             }
+
+             Console.WriteLine($"a beolvasott számok összege: {osszeg}");*/
+
+            //a tryparse használata(int32.TryParse)
+            /*int szam = -89;
+            bool valami = true;
+            do
+            {
+                Console.Write("kérek egy számot!");
+
+                 valami = Int32.TryParse(Console.ReadLine(), out szam);
+
+            } while (!valami);
+
+
+            
+            
+            Console.WriteLine($"a bekért szám:{szam}");*/
+
+
+            //23.feladat
+
+            /*string kimenet = "";
+
+            Console.Write("Kérek egy egész Számot");
+
+            int szam = Convert.ToInt32(Console.ReadLine());
+
+            kimenet += szam + " = ";
+
+            while(szam % 2 == 0)
+            {
+                kimenet += 2 + " * ";
+                szam = szam / 2;
+
+            }
+            
+           
+
+            Console.WriteLine(kimenet);*/
+
+
+            //25.feladat
+
+            /*string kimenet = "";
+
+            Console.Write("Kérek egy egész Számot");
+            int szam = Convert.ToInt32(Console.ReadLine());
+
+            kimenet += szam + " = ";
+            int egesz = 0;
+            int tort = -szam;
+
+
+
+
+            while(szam - 3 >= 0)
+
+            {
+                szam = szam - 3;
+                egesz++;
+                tort = szam ;
+
+
             }
 
-            Console.WriteLine($"a beolvasott számok összege: {osszeg}");
+            kimenet += egesz + " * 3 + " + tort;
+
+            Console.WriteLine(kimenet);*/
+            //24.feladat
+            /*string alma = "";
+
+
+            while(alma != "alma"){
+                Console.WriteLine("Kérek egy gyümölcsöt");
+                alma = Console.ReadLine();
+
+
+            }
+            Console.WriteLine("az alma gyümölcs");*/
+
+
+
+            //28./29. feladat
+            /* Console.WriteLine("Kérek egy egész számot!");
+
+             int szam = Convert.ToInt32(Console.ReadLine());
+             kimenet += szam + "=";
+
+             int meddig = (int)(Math.Floor(Math.Sqrt(szam))) + 1;
+
+
+             for (int i = 2; i < meddig; i++)
+             {
+
+                 if (szam % i == 0)
+                 {
+
+                 }
+             }
+
+             Console.WriteLine(kimenet);*/
+
+
+
+
+           /* Console.WriteLine("kérek egy számot");
+            int szam = Int32.Parse(Console.ReadLine());
+            for (int i = 1; i < szam+1; i++)
+            {
+
+                for (int j = 1; j < szam+1; j++)
+                {
+                    Console.SetCursorPosition(3 * (j - 1) + 1, i);
+                    Console.Write($"{i * j}");
+                }
+            }*/
+
+
+            //34.feladat
+            
+            for(int i=1;i < 100;i++)
+            {
+
+                for(int j=10;j<100;j++)
+                {
+                    for(int k=10;k<100;k++){
+                        
+                    }
+
+                }
+            }
+
+
 
 
             Console.ReadKey(true);
-        }
-
-        static bool primszamE(int szam)
-        {
-            bool teljesul = true;
+       
+        
 
 
-            int osztokSzama = 0;
-            
-            for(int i=1; i<= szam;i++)
-            {
-                if(szam % i ==0)
+
+
+
+
+
+
+           /* static bool primszamE(int szam)
+             {
+                bool teljesul = true;
+
+
+                int osztokSzama = 0;
+
+                for (int i = 1; i <= szam; i++)
                 {
-                    osztokSzama++;
+                    if (szam % i == 0)
+                    {
+                        osztokSzama++;
+                    }
+
                 }
-                
-            }
-            if (osztokSzama == 2)
-            {
-                return teljesul;
-            }
-            else
-            {
-                return !teljesul;
+                if (osztokSzama == 2)
+                {
+                    return teljesul;
+                }
+                else
+                {
+                    return !teljesul;
+                }*/
             }
         }
     }
-}
+
+
